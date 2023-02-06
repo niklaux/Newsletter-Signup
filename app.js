@@ -1,6 +1,7 @@
 const express = require("express");
 const https = require("https");
 const axios = require("axios");
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 
@@ -64,6 +65,6 @@ app.post("/", (req, res) => {
   request.end();
 });
 
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
